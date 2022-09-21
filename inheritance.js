@@ -63,3 +63,32 @@ let arr = [];
     })
 
 console.log(arr2)
+
+
+
+
+function func(){
+    let num = document.getElementById("demo");
+    let num2 = num.value;
+    
+let str = num2.toString().split("")
+let arr=[];
+     for(var i=0; i<=str.length-1; i++){
+      var number = parseInt(str[i])
+          arr.push(number);
+     }
+
+       let arr2 = arr.filter((num)=>{
+
+             for(var j=2; j<=arr.length; j++){
+              if(num%j==0 && num!==j){
+                return false;
+              }
+             }
+             return true;
+       })
+       document.getElementById("demo1").innerHTML=`<p>${arr2}</p>`;
+    
+
+}
+
